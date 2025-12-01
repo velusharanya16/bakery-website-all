@@ -177,4 +177,17 @@ nav a:hover {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.big-cute-img {
+  width: 220px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ffb6e7;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.big-cute-img:hover {
+  transform: scale(1.06) rotate(-2deg);
+}
+
 
