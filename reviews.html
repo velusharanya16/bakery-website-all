@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews — Fifi Blossom</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fifi Blossom Bakery - Reviews 🌸</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-    <a href="custom.html">Custom Cake</a>
-    <a href="reviews.html">Reviews</a>
-</nav>
+  <!-- HEADER -->
+  <header class="header">
+      <h1>Fifi Blossom Bakery 🌸</h1>
+      <p>Customer Reviews 💗</p>
+  </header>
 
-<section class="section">
-    <h2 class="section-title">Customer Reviews 💗</h2>
+  <!-- REVIEWS FORM SECTION -->
+  <section class="reviews-section">
+      <h2>✨ Share Your Sweet Experience ✨</h2>
+      <form id="reviewForm" onsubmit="submitReview(event)">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <div class="card-container">
+          <label for="dessert">Dessert Ordered:</label>
+          <select id="dessert" name="dessert" required>
+              <option value="">--Select--</option>
+              <option value="Strawberry Macaron">Strawberry Macaron</option>
+              <option value="Vanilla Bloom Cake">Vanilla Bloom Cake</option>
+              <option value="Blossom Cupcake">Blossom Cupcake</option>
+              <option value="Pink Kitty Donut">Pink Kitty Donut</option>
+              <option value="Cherry Cream Cake">Cherry Cream Cake</option>
+          </select>
 
-        <div class="cake-card">
-            <p>"Best cake I ever had!! So soft and cute." 🍓</p>
-            <h4>- Aditi</h4>
-        </div>
+          <label for="review">Your Review:</label>
+          <textarea id="review" name="review" placeholder="Write your review..." required></textarea>
 
-        <div class="cake-card">
-            <p>"Macarons were heavenly… going to order again!" 💕</p>
-            <h4>- Neha</h4>
-        </div>
+          <button type="submit" class="review-btn">Submit Review 💗</button>
+      </form>
 
-        <div class="cake-card">
-            <p>"Custom kitty cake was PERFECT." 🎀</p>
-            <h4>- Riya</h4>
-        </div>
+      <!-- Display reviews -->
+      <div id="reviewsContainer" class="reviews-container">
+          <!-- Reviews will appear here -->
+      </div>
+  </section>
 
-    </div>
+  <!-- FOOTER -->
+  <footer class="footer">
+      <p>Made with 💗 by Fifi Blossom • 2025</p>
+  </footer>
 
-</section>
+  <script src="script.js"></script>
+  <script>
+    // Submit review function
+    function submitReview(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const dessert = document.getElementById('dessert').value;
+        const reviewText = document.getElementById('review').value;
 
-<script src="script.js"></script>
+        // Create review card
+        const reviewCard = document.createElement("div");
+        reviewCard.classList.add("review-card");
+        reviewCard.innerHTML = `
+            <h3>💗 ${name}</h3>
+            <p><strong>${dessert}:</strong> ${reviewText}</p>
+        `;
+        document.getElementById('reviewsContainer').prepend(reviewCard);
+
+        // Popup confirmation
+        const popup = document.createElement("div");
+        popup.classList.add("order-popup");
+        popup.innerHTML = `
+            <div class="order-card">
+                <h2>🎀 Review Submitted 🎀</h2>
+                <p>Thank you for sharing your experience! 💕</p>
+                <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+            </div>
+        `;
+        document.body.appendChild(popup);
+
+        document.getElementById('reviewForm').reset();
+    }
+  </script>
+
 </body>
 </html>
-
