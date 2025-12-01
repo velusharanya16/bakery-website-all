@@ -1,30 +1,16 @@
-// Cute sparkle animation on click
-document.addEventListener("click", (e) => {
-    let sparkle = document.createElement("div");
-    sparkle.classList.add("sparkle");
-    sparkle.style.left = e.pageX + "px";
-    sparkle.style.top = e.pageY + "px";
-    document.body.appendChild(sparkle);
-
-    setTimeout(() => sparkle.remove(), 600);
-});
-
-// Floating animation for bakery items
-document.querySelectorAll(".item img").forEach(img => {
-    img.addEventListener("click", () => {
-        img.classList.add("bounce");
-
-        setTimeout(() => {
-            img.classList.remove("bounce");
-        }, 600);
+// ===== BUTTON BOUNCE EFFECT =====
+const buttons = document.querySelectorAll('button, .btn');
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.add('bounce');
+        setTimeout(() => btn.classList.remove('bounce'), 300);
     });
 });
 
-// ORDER CONFIRMATION POPUP
+// ===== PLACE ORDER FUNCTION =====
 function placeOrder(itemName) {
     const popup = document.createElement("div");
     popup.classList.add("order-popup");
-
     popup.innerHTML = `
         <div class="order-card">
             <h2>🎀 Order Confirmed 🎀</h2>
@@ -32,6 +18,54 @@ function placeOrder(itemName) {
             <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
         </div>
     `;
-
     document.body.appendChild(popup);
+}
+
+// ===== CUSTOM ORDER FUNCTION =====
+function submitCustomOrder(e) {
+    e.preventDefault();
+    const dessert = document.getElementById('dessert').value;
+    const popup = document.createElement("div");
+    popup.classList.add("order-popup");
+    popup.innerHTML = `
+        <div class="order-card">
+            <h2>🎀 Request Sent 🎀</h2>
+            <p>Your custom <strong>${dessert}</strong> request has been sent! 🍰</p>
+            <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+        </div>
+    `;
+    document.body.appendChild(popup);
+    document.getElementById('customForm').reset();
+}
+
+// ===== REVIEW SUBMISSION FUNCTION =====
+function submitReview(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const dessert = document.getElementById('dessert').value;
+    const reviewText = document.getElementById('review').value;
+
+    // Create review card
+    const reviewCard = document.createElement("div");
+    reviewCard.classList.add("review-card");
+    reviewCard.innerHTML = `
+        <h3>💗 ${name}</h3>
+        <p><strong>${dessert}:</strong> ${reviewText}</p>
+    `;
+    const container = document.getElementById('reviewsContainer');
+    if (container) container.prepend(reviewCard);
+
+    // Popup confirmation
+    const popup = document.createElement("div");
+    popup.classList.add("order-popup");
+    popup.innerHTML = `
+        <div class="order-card">
+            <h2>🎀 Review Submitted 🎀</h2>
+            <p>Thank you for sharing your experience! 💕</p>
+            <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+        </div>
+    `;
+    document.body.appendChild(popup);
+
+    document.getElementById('reviewForm').reset();
 }
