@@ -1,79 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Order — SweetSlice Bakery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order — Fifi Blossom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">SweetSlice</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="order.html" class="nav-link">Order</a>
-        <a href="custom.html" class="nav-link">Custom Cake</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-      </div>
-    </div>
-  </nav>
 
-  <main class="container">
-    <h1>Quick Order</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="order.html">Order</a>
+    <a href="custom.html">Custom Cake</a>
+    <a href="reviews.html">Reviews</a>
+</nav>
 
-    <form id="orderForm" class="form-grid" onsubmit="submitOrder(event)">
-      <label>
-        Name
-        <input id="orderName" type="text" required>
-      </label>
+<section class="section">
+    <h2 class="section-title">Place an Order 🧁</h2>
 
-      <label>
-        Phone
-        <input id="orderPhone" type="tel" required placeholder="9876543210">
-      </label>
+    <form style="max-width: 400px; margin: auto; background:white; padding:20px; border-radius:20px; border:2px solid var(--outline);">
+        <input type="text" placeholder="Your Name" class="input-box"><br><br>
+        <input type="text" placeholder="Phone Number" class="input-box"><br><br>
+        <input type="text" placeholder="Cake Name" class="input-box"><br><br>
+        <input type="number" placeholder="Quantity" class="input-box"><br><br>
+        <textarea placeholder="Address" class="input-box"></textarea><br><br>
 
-      <label>
-        Item (from menu)
-        <input id="orderItem" type="text" required placeholder="E.g. Strawberry Dream - 1kg">
-      </label>
-
-      <label>
-        Quantity
-        <input id="orderQty" type="number" min="1" value="1" required>
-      </label>
-
-      <label>
-        Pickup / Delivery
-        <select id="orderMode">
-          <option>Pickup</option>
-          <option>Delivery</option>
-        </select>
-      </label>
-
-      <label class="full">
-        Additional notes
-        <textarea id="orderNotes" rows="3" placeholder="Any message for us?"></textarea>
-      </label>
-
-      <button class="btn" type="submit">Place Order</button>
+        <button class="order-btn">Place Order 🍰</button>
     </form>
 
-    <div id="orderSuccess" class="hidden success-box">
-      <p>Thanks! Your order has been saved locally for demo. We will contact you soon.</p>
-    </div>
-  </main>
+</section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© SweetSlice Bakery</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
