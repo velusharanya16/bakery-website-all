@@ -1,54 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fifi Blossom Bakery - Menu</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifi Blossom Bakery - Menu</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-    <a href="custom.html">Custom Cake</a>
-    <a href="reviews.html">Reviews</a>
-  </nav>
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="order.html">Order</a>
+  <a href="custom.html">Custom Cake</a>
+  <a href="reviews.html">Reviews</a>
+</nav>
 
-  <header class="header">
-    <h1>Our Menu 🍰</h1>
-    <p>Sweet treats just for you!</p>
-  </header>
+<header class="header">
+  <h1>Our Menu 🍰</h1>
+  <p>Sweet treats just for you!</p>
+</header>
 
-  <section class="menu-section">
-    <div class="menu">
-      <div class="item">
-        <img src="https://i.ibb.co/Y7n7rT4/macaron.png" alt="Strawberry Macaron" class="big-cute-img">
-        <h3>Strawberry Macaron</h3>
-        <p>Delicious fruity macaron.</p>
-      </div>
-      <div class="item">
-        <img src="https://i.ibb.co/0t6g5FH/cake1.png" alt="Vanilla Bloom Cake" class="big-cute-img">
-        <h3>Vanilla Bloom Cake</h3>
-        <p>Soft vanilla sponge with cream.</p>
-      </div>
-      <div class="item">
-        <img src="https://i.ibb.co/9G0bRzS/cupcake.png" alt="Blossom Cupcake" class="big-cute-img">
-        <h3>Blossom Cupcake</h3>
-        <p>Cute cupcakes for every occasion.</p>
-      </div>
+<section class="menu-section">
+  <div class="menu">
+    <div class="item">
+      <img src="https://i.ibb.co/Y7n7rT4/macaron.png" alt="Strawberry Macaron" class="big-cute-img" onclick="placeOrder('Strawberry Macaron')">
+      <h3>Strawberry Macaron</h3>
+      <p>Delicious fruity macaron.</p>
+      <button onclick="placeOrder('Strawberry Macaron')">Order Now 💗</button>
     </div>
-  </section>
+    <div class="item">
+      <img src="https://i.ibb.co/0t6g5FH/cake1.png" alt="Vanilla Bloom Cake" class="big-cute-img" onclick="placeOrder('Vanilla Bloom Cake')">
+      <h3>Vanilla Bloom Cake</h3>
+      <p>Soft vanilla sponge with cream.</p>
+      <button onclick="placeOrder('Vanilla Bloom Cake')">Order Now 💗</button>
+    </div>
+    <div class="item">
+      <img src="https://i.ibb.co/9G0bRzS/cupcake.png" alt="Blossom Cupcake" class="big-cute-img" onclick="placeOrder('Blossom Cupcake')">
+      <h3>Blossom Cupcake</h3>
+      <p>Cute cupcakes for every occasion.</p>
+      <button onclick="placeOrder('Blossom Cupcake')">Order Now 💗</button>
+    </div>
+  </div>
+</section>
 
-  <footer class="footer">
-    <p>Made with 💗 by Fifi Blossom • 2025</p>
-  </footer>
+<footer class="footer">
+  <p>Made with 💗 by Fifi Blossom • 2025</p>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
+
 
 
