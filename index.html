@@ -1,93 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SweetSlice Bakery — Home</title>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fifi Blossom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">SweetSlice</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="order.html" class="nav-link">Order</a>
-        <a href="custom.html" class="nav-link">Custom Cake</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-      </div>
-    </div>
-  </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-inner">
-      <h1>SweetSlice Bakery</h1>
-      <p class="subtitle">Handmade cakes, cupcakes & pastries — baked with love ❤️</p>
-      <a class="btn" href="menu.html">See Menu</a>
-    </div>
-    <div class="hero-img" aria-hidden="true"></div>
-  </header>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="order.html">Order</a>
+        <a href="custom.html">Custom Cake</a>
+        <a href="reviews.html">Reviews</a>
+    </nav>
 
-  <!-- Featured -->
-  <section class="container featured">
-    <h2>Featured Treats</h2>
-    <div class="grid">
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?w=900&q=80&auto=format&fit=crop" alt="Strawberry Cake">
-        <h3>Strawberry Dream</h3>
-        <p class="price">₹1200 — 1kg</p>
-      </article>
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 class="big-title">Fifi Blossom</h1>
+        <p class="tagline">Where every sweet is a hug 🍓🎀</p>
+        <img src="https://i.imgur.com/nlL5rQk.png" class="hero-img floating">
+    </header>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1542444459-db0d7d1e6d6f?w=900&q=80&auto=format&fit=crop" alt="Cupcakes">
-        <h3>Vanilla Cupcakes (6)</h3>
-        <p class="price">₹450</p>
-      </article>
+    <!-- Featured Cakes -->
+    <section class="section">
+        <h2 class="section-title">Featured Treats 🍰</h2>
 
-      <article class="card">
-        <img src="https://images.unsplash.com/photo-1527515637460-05a6f0b3a7d7?w=900&q=80&auto=format&fit=crop" alt="Macarons">
-        <h3>Berry Macarons</h3>
-        <p class="price">₹300 — box</p>
-      </article>
-    </div>
-  </section>
+        <div class="card-container">
 
-  <!-- Why choose us -->
-  <section class="container small">
-    <h2>Why SweetSlice?</h2>
-    <div class="grid-3">
-      <div class="info">
-        <h4>Fresh Ingredients</h4>
-        <p>No preservatives — daily-baked goods with real butter & seasonal fruit.</p>
-      </div>
-      <div class="info">
-        <h4>Custom Cakes</h4>
-        <p>Personalized designs for birthdays, weddings and all small celebrations.</p>
-      </div>
-      <div class="info">
-        <h4>Friendly Service</h4>
-        <p>We take care of packaging and delivery with smiles 🙂</p>
-      </div>
-    </div>
-  </section>
+            <div class="cake-card floating">
+                <img src="https://i.imgur.com/Uu7qbE0.png" class="cake-img">
+                <h3>Strawberry Dream Cake</h3>
+                <p>Soft, creamy and perfect for your sweet mood.</p>
+            </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <strong>SweetSlice Bakery</strong> • 2025 • Red & White Studio</p>
-      <p>Follow us: <a href="#" aria-label="instagram">Instagram</a> • <a href="#">Facebook</a></p>
-    </div>
-  </footer>
+            <div class="cake-card floating">
+                <img src="https://i.imgur.com/GP7mXf1.png" class="cake-img">
+                <h3>Pink Macaron Box</h3>
+                <p>Little bites of joy with cute pastel colors.</p>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="cake-card floating">
+                <img src="https://i.imgur.com/9K2oA2u.png" class="cake-img">
+                <h3>Red Velvet Bliss</h3>
+                <p>Classic, rich and super soft.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
