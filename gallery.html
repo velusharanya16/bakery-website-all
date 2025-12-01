@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fifi Blossom Bakery - Gallery</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifi Blossom Bakery - Gallery</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="top-nav">
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-    <a href="custom.html">Custom Cake</a>
-    <a href="reviews.html">Reviews</a>
-  </nav>
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="order.html">Order</a>
+  <a href="custom.html">Custom Cake</a>
+  <a href="reviews.html">Reviews</a>
+</nav>
 
-  <header class="header">
-    <h1>Gallery 🌸</h1>
-    <p>Sweet creations to delight your eyes!</p>
-  </header>
+<header class="header">
+  <h1>Gallery 🌸</h1>
+  <p>Sweet creations to delight your eyes!</p>
+</header>
 
-  <section class="gallery-section">
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://i.ibb.co/0t6g5FH/cake1.png" alt="Cake 1"></div>
-      <div class="gallery-item"><img src="https://i.ibb.co/Y7n7rT4/macaron.png" alt="Macaron"></div>
-      <div class="gallery-item"><img src="https://i.ibb.co/9G0bRzS/cupcake.png" alt="Cupcake"></div>
-    </div>
-  </section>
+<section class="gallery-section">
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://i.ibb.co/0t6g5FH/cake1.png" alt="Cake 1" onclick="placeOrder('Vanilla Bloom Cake')"></div>
+    <div class="gallery-item"><img src="https://i.ibb.co/Y7n7rT4/macaron.png" alt="Macaron" onclick="placeOrder('Strawberry Macaron')"></div>
+    <div class="gallery-item"><img src="https://i.ibb.co/9G0bRzS/cupcake.png" alt="Cupcake" onclick="placeOrder('Blossom Cupcake')"></div>
+  </div>
+</section>
 
-  <footer class="footer">
-    <p>Made with 💗 by Fifi Blossom • 2025</p>
-  </footer>
+<footer class="footer">
+  <p>Made with 💗 by Fifi Blossom • 2025</p>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
