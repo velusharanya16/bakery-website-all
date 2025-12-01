@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order — Fifi Blossom</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fifi Blossom Bakery - Place Order 🌸</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-    <a href="custom.html">Custom Cake</a>
-    <a href="reviews.html">Reviews</a>
-</nav>
+  <!-- HEADER -->
+  <header class="header">
+      <h1>Fifi Blossom Bakery 🌸</h1>
+      <p>Place Your Order 💗</p>
+  </header>
 
-<section class="section">
-    <h2 class="section-title">Place an Order 🧁</h2>
+  <!-- ORDER FORM SECTION -->
+  <section class="order-section">
+      <h2>✨ Place Your Order ✨</h2>
+      <form id="orderForm" onsubmit="submitOrder(event)">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <form style="max-width: 400px; margin: auto; background:white; padding:20px; border-radius:20px; border:2px solid var(--outline);">
-        <input type="text" placeholder="Your Name" class="input-box"><br><br>
-        <input type="text" placeholder="Phone Number" class="input-box"><br><br>
-        <input type="text" placeholder="Cake Name" class="input-box"><br><br>
-        <input type="number" placeholder="Quantity" class="input-box"><br><br>
-        <textarea placeholder="Address" class="input-box"></textarea><br><br>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <button class="order-btn">Place Order 🍰</button>
-    </form>
+          <label for="item">Choose Item:</label>
+          <select id="item" name="item" required>
+              <option value="">--Select--</option>
+              <option value="Strawberry Macaron">Strawberry Macaron</option>
+              <option value="Vanilla Bloom Cake">Vanilla Bloom Cake</option>
+              <option value="Blossom Cupcake">Blossom Cupcake</option>
+              <option value="Pink Kitty Donut">Pink Kitty Donut</option>
+              <option value="Cherry Cream Cake">Cherry Cream Cake</option>
+          </select>
 
-</section>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-<script src="script.js"></script>
+          <button type="submit" class="order-btn">Place Order 💗</button>
+      </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+      <p>Made with 💗 by Fifi Blossom • 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Cute order popup
+    function submitOrder(e) {
+        e.preventDefault();
+        const item = document.getElementById('item').value;
+        const popup = document.createElement("div");
+        popup.classList.add("order-popup");
+        popup.innerHTML = `
+            <div class="order-card">
+                <h2>🎀 Order Confirmed 🎀</h2>
+                <p>Your <strong>${item}</strong> is on the way! 🍰</p>
+                <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+            </div>
+        `;
+        document.body.appendChild(popup);
+        document.getElementById('orderForm').reset();
+    }
+  </script>
 </body>
 </html>
