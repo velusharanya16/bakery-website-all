@@ -1,68 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Reviews — SweetSlice Bakery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews — Fifi Blossom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">SweetSlice</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="order.html" class="nav-link">Order</a>
-        <a href="custom.html" class="nav-link">Custom Cake</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-      </div>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="order.html">Order</a>
+    <a href="custom.html">Custom Cake</a>
+    <a href="reviews.html">Reviews</a>
+</nav>
+
+<section class="section">
+    <h2 class="section-title">Customer Reviews 💗</h2>
+
+    <div class="card-container">
+
+        <div class="cake-card">
+            <p>"Best cake I ever had!! So soft and cute." 🍓</p>
+            <h4>- Aditi</h4>
+        </div>
+
+        <div class="cake-card">
+            <p>"Macarons were heavenly… going to order again!" 💕</p>
+            <h4>- Neha</h4>
+        </div>
+
+        <div class="cake-card">
+            <p>"Custom kitty cake was PERFECT." 🎀</p>
+            <h4>- Riya</h4>
+        </div>
+
     </div>
-  </nav>
 
-  <main class="container">
-    <h1>Happy Customers</h1>
+</section>
 
-    <div class="grid-3">
-      <div class="review-card">
-        <p>“The cake was so soft and pretty — everyone loved it!”</p>
-        <h4>— Asha</h4>
-      </div>
-      <div class="review-card">
-        <p>“Amazing cupcakes; fast delivery. Will order again!”</p>
-        <h4>— Ravi</h4>
-      </div>
-      <div class="review-card">
-        <p>“Custom cake was perfect for our anniversary — thank you!”</p>
-        <h4>— Sneha</h4>
-      </div>
-    </div>
-
-    <section class="add-review">
-      <h2>Leave a review</h2>
-      <form id="reviewForm" onsubmit="submitReview(event)" class="form-grid">
-        <label>
-          Name
-          <input id="revName" required>
-        </label>
-        <label class="full">
-          Review
-          <textarea id="revText" rows="3" required></textarea>
-        </label>
-        <button class="btn" type="submit">Submit Review</button>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© SweetSlice Bakery</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
+
