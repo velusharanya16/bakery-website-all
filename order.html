@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="top-nav">
   <a href="index.html">Home</a>
   <a href="menu.html">Menu</a>
@@ -26,36 +25,30 @@
 
 <section class="order-section">
   <form id="orderForm" onsubmit="submitOrder(event)">
-    <label for="name">Name:</label>
-    <input type="text" id="name" placeholder="Enter your name" required>
-
-    <label for="item">Item:</label>
+    <input type="text" id="name" placeholder="Your Name" required>
     <select id="item" required>
-      <option value="">--Select--</option>
+      <option value="">Select Item</option>
       <option>Strawberry Macaron</option>
       <option>Vanilla Bloom Cake</option>
       <option>Blossom Cupcake</option>
     </select>
-
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" value="1" min="1" required>
-
-    <button type="submit" class="order-btn">Place Order 💗</button>
+    <input type="number" id="quantity" placeholder="Quantity" min="1" value="1" required>
+    <button type="submit" class="btn">Place Order 💗</button>
   </form>
 </section>
 
 <footer class="footer">
-<p>Made with 💗 by Fifi Blossom • 2025</p>
+  <p>Made with 💗 by Fifi Blossom • 2025</p>
 </footer>
 
 <script src="script.js"></script>
 <script>
 function submitOrder(e){
   e.preventDefault();
-  const item = document.getElementById('item').value;
-  const popup = document.createElement("div");
-  popup.classList.add("order-popup");
-  popup.innerHTML = `
+  const item=document.getElementById('item').value;
+  const popup=document.createElement('div');
+  popup.classList.add('order-popup');
+  popup.innerHTML=`
     <div class="order-card">
       <h2>🎀 Order Confirmed 🎀</h2>
       <p>Your <strong>${item}</strong> is on the way! 🍰</p>
@@ -65,8 +58,3 @@ function submitOrder(e){
   document.getElementById('orderForm').reset();
 }
 </script>
-
-</body>
-</html>
-
-
