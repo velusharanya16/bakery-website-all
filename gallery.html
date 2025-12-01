@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gallery — SweetSlice Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">SweetSlice</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="order.html" class="nav-link">Order</a>
+        <a href="custom.html" class="nav-link">Custom Cake</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Gallery</h1>
+    <div class="gallery-grid">
+      <!-- Use placeholders from Unsplash or replace with your images -->
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1542831371-d531d36971e6?w=900&q=80&auto=format&fit=crop" alt="">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1527515637460-05a6f0b3a7d7?w=900&q=80&auto=format&fit=crop" alt="">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1563298723-dcfebaa392e3?w=900&q=80&auto=format&fit=crop" alt="">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=900&q=80&auto=format&fit=crop" alt="">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&q=80&auto=format&fit=crop" alt="">
+      <img class="gallery-img" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=900&q=80&auto=format&fit=crop" alt="">
+    </div>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© SweetSlice Bakery</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
