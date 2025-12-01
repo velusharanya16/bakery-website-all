@@ -1,43 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Cake — Fifi Blossom</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fifi Blossom Bakery - Custom Orders 🌸</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menu</a>
-    <a href="about.html">About</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="order.html">Order</a>
-    <a href="custom.html">Custom Cake</a>
-    <a href="reviews.html">Reviews</a>
-</nav>
+  <!-- HEADER -->
+  <header class="header">
+      <h1>Fifi Blossom Bakery 🌸</h1>
+      <p>Custom Orders 💗</p>
+  </header>
 
-<section class="section">
-    <h2 class="section-title">Custom Cake 🎂</h2>
+  <!-- CUSTOM ORDER FORM -->
+  <section class="custom-section">
+      <h2>✨ Create Your Dream Dessert ✨</h2>
+      <form id="customForm" onsubmit="submitCustomOrder(event)">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-    <p style="max-width:550px;margin:auto;color:#b84a5b;">
-        Want a cake shaped like a kitty?  
-        Want a pink heart theme?  
-        Want a custom message?  
-        Tell us! We'll bake your dream cake 💗✨
-    </p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-    <form style="max-width: 400px; margin: auto; background:white; padding:20px; border-radius:20px; border:2px solid var(--outline);">
-        <input type="text" placeholder="Your Name" class="input-box"><br><br>
-        <input type="text" placeholder="Phone Number" class="input-box"><br><br>
-        <textarea placeholder="Describe your custom cake ✨" class="input-box"></textarea><br><br>
+          <label for="dessert">Dessert Type:</label>
+          <select id="dessert" name="dessert" required>
+              <option value="">--Select--</option>
+              <option value="Cake">Cake</option>
+              <option value="Macarons">Macarons</option>
+              <option value="Cupcakes">Cupcakes</option>
+              <option value="Donuts">Donuts</option>
+          </select>
 
-        <button class="order-btn">Submit 🎀</button>
-    </form>
+          <label for="details">Custom Details:</label>
+          <textarea id="details" name="details" placeholder="Describe your dream dessert..." required></textarea>
 
-</section>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-<script src="script.js"></script>
+          <button type="submit" class="order-btn">Send Request 💗</button>
+      </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+      <p>Made with 💗 by Fifi Blossom • 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Custom order popup
+    function submitCustomOrder(e) {
+        e.preventDefault();
+        const dessert = document.getElementById('dessert').value;
+        const popup = document.createElement("div");
+        popup.classList.add("order-popup");
+        popup.innerHTML = `
+            <div class="order-card">
+                <h2>🎀 Request Sent 🎀</h2>
+                <p>Your custom <strong>${dessert}</strong> request has been sent! 🍰</p>
+                <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+            </div>
+        `;
+        document.body.appendChild(popup);
+        document.getElementById('customForm').reset();
+    }
+  </script>
+
 </body>
 </html>
