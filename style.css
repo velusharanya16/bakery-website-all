@@ -210,4 +210,3 @@ input[type="text"], input[type="number"], select, textarea {
 @media screen and (max-width:768px){
   .menu, .gallery-grid { flex-direction: column; align-items:center; }
 }
-
