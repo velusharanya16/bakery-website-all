@@ -62,4 +62,3 @@ function submitReview(e){
 
   document.getElementById('reviewForm').reset();
 }
-
