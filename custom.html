@@ -1,90 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Custom Cake — SweetSlice Bakery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Cake — Fifi Blossom</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">SweetSlice</a>
-      <div class="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="order.html" class="nav-link">Order</a>
-        <a href="custom.html" class="nav-link">Custom Cake</a>
-        <a href="reviews.html" class="nav-link">Reviews</a>
-      </div>
-    </div>
-  </nav>
 
-  <main class="container">
-    <h1>Custom Cake Request</h1>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="order.html">Order</a>
+    <a href="custom.html">Custom Cake</a>
+    <a href="reviews.html">Reviews</a>
+</nav>
 
-    <form id="customForm" class="form-grid" onsubmit="submitCustom(event)">
-      <label>
-        Name
-        <input id="custName" type="text" required>
-      </label>
+<section class="section">
+    <h2 class="section-title">Custom Cake 🎂</h2>
 
-      <label>
-        Phone
-        <input id="custPhone" type="tel" required>
-      </label>
+    <p style="max-width:550px;margin:auto;color:#b84a5b;">
+        Want a cake shaped like a kitty?  
+        Want a pink heart theme?  
+        Want a custom message?  
+        Tell us! We'll bake your dream cake 💗✨
+    </p>
 
-      <label>
-        Occasion
-        <input id="custOccasion" type="text" required placeholder="Birthday / Anniversary">
-      </label>
+    <form style="max-width: 400px; margin: auto; background:white; padding:20px; border-radius:20px; border:2px solid var(--outline);">
+        <input type="text" placeholder="Your Name" class="input-box"><br><br>
+        <input type="text" placeholder="Phone Number" class="input-box"><br><br>
+        <textarea placeholder="Describe your custom cake ✨" class="input-box"></textarea><br><br>
 
-      <label>
-        Cake size
-        <select id="custSize">
-          <option>1 kg</option>
-          <option>2 kg</option>
-          <option>3 kg</option>
-        </select>
-      </label>
-
-      <label>
-        Flavor
-        <select id="custFlavor">
-          <option>Vanilla</option>
-          <option>Chocolate</option>
-          <option>Strawberry</option>
-          <option>Butterscotch</option>
-        </select>
-      </label>
-
-      <label class="full">
-        Decoration details
-        <textarea id="custDecor" rows="4" placeholder="Describe colors, theme, message..."></textarea>
-      </label>
-
-      <label class="full">
-        Upload reference image (optional)
-        <input id="custImage" type="file" accept="image/*">
-      </label>
-
-      <button class="btn" type="submit">Send Request</button>
+        <button class="order-btn">Submit 🎀</button>
     </form>
 
-    <div id="customSuccess" class="hidden success-box">
-      <p>Thanks! Your custom request has been saved locally for demo. We'll contact you for details.</p>
-    </div>
-  </main>
+</section>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© SweetSlice Bakery</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
