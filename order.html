@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fifi Blossom Bakery - Place Order 🌸</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fifi Blossom Bakery - Order</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-      <h1>Fifi Blossom Bakery 🌸</h1>
-      <p>Place Your Order 💗</p>
-  </header>
+<!-- NAVBAR -->
+<nav class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="order.html">Order</a>
+  <a href="custom.html">Custom Cake</a>
+  <a href="reviews.html">Reviews</a>
+</nav>
 
-  <!-- ORDER FORM SECTION -->
-  <section class="order-section">
-      <h2>✨ Place Your Order ✨</h2>
-      <form id="orderForm" onsubmit="submitOrder(event)">
-          <label for="name">Your Name:</label>
-          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+<header class="header">
+  <h1>Place Your Order 🍰</h1>
+  <p>Choose your favorite treats 💗</p>
+</header>
 
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+<section class="order-section">
+  <form id="orderForm" onsubmit="submitOrder(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required>
 
-          <label for="item">Choose Item:</label>
-          <select id="item" name="item" required>
-              <option value="">--Select--</option>
-              <option value="Strawberry Macaron">Strawberry Macaron</option>
-              <option value="Vanilla Bloom Cake">Vanilla Bloom Cake</option>
-              <option value="Blossom Cupcake">Blossom Cupcake</option>
-              <option value="Pink Kitty Donut">Pink Kitty Donut</option>
-              <option value="Cherry Cream Cake">Cherry Cream Cake</option>
-          </select>
+    <label for="item">Item:</label>
+    <select id="item" required>
+      <option value="">--Select--</option>
+      <option>Strawberry Macaron</option>
+      <option>Vanilla Bloom Cake</option>
+      <option>Blossom Cupcake</option>
+    </select>
 
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" value="1" min="1" required>
 
-          <button type="submit" class="order-btn">Place Order 💗</button>
-      </form>
-  </section>
+    <button type="submit" class="order-btn">Place Order 💗</button>
+  </form>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-      <p>Made with 💗 by Fifi Blossom • 2025</p>
-  </footer>
+<footer class="footer">
+<p>Made with 💗 by Fifi Blossom • 2025</p>
+</footer>
 
-  <script src="script.js"></script>
-  <script>
-    // Cute order popup
-    function submitOrder(e) {
-        e.preventDefault();
-        const item = document.getElementById('item').value;
-        const popup = document.createElement("div");
-        popup.classList.add("order-popup");
-        popup.innerHTML = `
-            <div class="order-card">
-                <h2>🎀 Order Confirmed 🎀</h2>
-                <p>Your <strong>${item}</strong> is on the way! 🍰</p>
-                <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
-            </div>
-        `;
-        document.body.appendChild(popup);
-        document.getElementById('orderForm').reset();
-    }
-  </script>
+<script src="script.js"></script>
+<script>
+function submitOrder(e){
+  e.preventDefault();
+  const item = document.getElementById('item').value;
+  const popup = document.createElement("div");
+  popup.classList.add("order-popup");
+  popup.innerHTML = `
+    <div class="order-card">
+      <h2>🎀 Order Confirmed 🎀</h2>
+      <p>Your <strong>${item}</strong> is on the way! 🍰</p>
+      <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+    </div>`;
+  document.body.appendChild(popup);
+  document.getElementById('orderForm').reset();
+}
+</script>
+
 </body>
 </html>
+
+
