@@ -19,3 +19,19 @@ document.querySelectorAll(".item img").forEach(img => {
         }, 600);
     });
 });
+
+// ORDER CONFIRMATION POPUP
+function placeOrder(itemName) {
+    const popup = document.createElement("div");
+    popup.classList.add("order-popup");
+
+    popup.innerHTML = `
+        <div class="order-card">
+            <h2>🎀 Order Confirmed 🎀</h2>
+            <p>Your <strong>${itemName}</strong> is on the way! 🍰</p>
+            <button onclick="this.parentElement.parentElement.remove()">Okay 💗</button>
+        </div>
+    `;
+
+    document.body.appendChild(popup);
+}
